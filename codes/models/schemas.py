@@ -3,9 +3,9 @@ from typing import List, Dict
 
 
 class QuizRequest(BaseModel):
-    domain: str = Field(..., example="Python Basics")
+    domain: str = Field(..., examples="Python Basics"or"java"or"Physics")
     difficulty: str = Field(..., example="beginner")
-    num_questions: int = Field(..., ge=1, le=20, example=10)
+    num_questions: int = Field(..., ge=1, le=100, example=10)
 
 
 class Question(BaseModel):
