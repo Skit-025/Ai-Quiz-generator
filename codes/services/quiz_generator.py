@@ -6,7 +6,7 @@ import streamlit as st
 from models.schemas import QuizRequest, Question
 
 
-HF_TOKEN = st.secrets["default"]["HF_TOKEN"]
+HF_TOKEN = st.secrets["HF_TOKEN"]
 if not HF_TOKEN:
     raise RuntimeError("HF_TOKEN environment variable not set")
 
