@@ -2,13 +2,11 @@ import os
 import json
 import uuid
 import requests
+import streamlit as st
 from models.schemas import QuizRequest, Question
 
-# =========================
-# Hugging Face Router Config
-# =========================
 
-HF_TOKEN = os.getenv("HF_TOKEN")
+HF_TOKEN = st.secrets["default"]["HF_TOKEN"]
 if not HF_TOKEN:
     raise RuntimeError("HF_TOKEN environment variable not set")
 
